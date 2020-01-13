@@ -92,11 +92,11 @@ class App extends Component {
     <div className="App"> 
       <div className = 'todo-list'> 
         <TimeDate></TimeDate>
-        {/* {todoComponents} */}
+        {this.state.isLoading ? todoComponents : 'Loading todo list.' } 
         {/* <TodoList></TodoList>
         <TodoList></TodoList>
-        <TodoList></TodoList> */}
-        <h3>{this.state.isLoading ? <Conditional/>: 'Loading.' } </h3>
+        {/* <TodoList></TodoList> */}
+       
        </div>  
     </div> 
   )}

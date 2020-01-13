@@ -5,6 +5,18 @@ function TimeDate() {
     const hours = date.getHours() //get the hours
     let timeofday
 
+
+    var weekday = new Array(7);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    const dayofweek = weekday[date.getDay()];
+
     const style = {
         fontSize:'20px',
         textAlign:'center'
@@ -24,7 +36,7 @@ function TimeDate() {
 
     return (
         <div>
-            <h3 style = {style}>Hi, here is a list of things to do this {timeofday} </h3>
+            <h3 style = {style}>Hi, here is a list of things to do this {dayofweek} {timeofday} </h3>
         </div>
     )
 }
